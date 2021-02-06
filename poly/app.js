@@ -22,7 +22,7 @@ scene1.add(lightP1);
 
 renderer1.setSize(window.innerWidth, window.innerHeight);
 renderer1.setClearColor(0xdfe4e8, 1.07);
-document.getElementById("plane").appendChild(renderer1.domElement);
+document.getElementById("castle").appendChild(renderer1.domElement);
 
 loader1.load(
   "https://holesa.github.io/staging/poly/models/castle/castle.gltf",
