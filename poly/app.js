@@ -84,13 +84,13 @@ scene2.add(lightP2);
 
 var mouseTolerance = 0.3;
 
-// document.onmousemove = function (e) {
-//   var centerX = window.innerWidth * 0.4;
-//   var centerY = window.innerHeight * 0.4;
+ document.onmousemove = function (e) {
+   var centerX = window.innerWidth * 0.4;
+  var centerY = window.innerHeight * 0.4;
 
-//   //scene.rotation.y = ((e.clientX - centerX) / centerX) * mouseTolerance;
-//   scene2.rotation.x = ((e.clientY - centerY) / centerY) * mouseTolerance;
-// };
+   //scene.rotation.y = ((e.clientX - centerX) / centerX) * mouseTolerance;
+   scene2.rotation.x = ((e.clientY - centerY) / centerY) * mouseTolerance;
+ };
 
 const animate2 = function () {
   requestAnimationFrame(animate2);
