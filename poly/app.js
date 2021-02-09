@@ -42,7 +42,7 @@ loader1.load(
 
 
 window.onscroll = (e) => {
-  scene1.rotation.x = -this.scrollY / 1800.0;
+  scene1.rotation.x = -this.scrollY / 1000.0;
 };
 
 const animate1 = function () {
