@@ -40,6 +40,11 @@ loader1.load(
   }
 );
 
+
+window.onscroll = (e) => {
+  scene1.rotation.x = -this.scrollY / 1800.0;
+};
+
 const animate1 = function () {
   requestAnimationFrame(animate1);
   renderer1.setPixelRatio(window.devicePixelRatio);
@@ -84,9 +89,9 @@ scene2.add(lightP2);
 
 var mouseTolerance = 0.3;
 
- window.onscroll = (e) => {
-  scene2.rotation.x = -this.scrollY / 1800.0;
-};
+ //window.onscroll = (e) => {
+ // scene2.rotation.x = -this.scrollY / 1800.0;
+//};
 
 const animate2 = function () {
   requestAnimationFrame(animate2);
