@@ -13,23 +13,16 @@ const loader1 = new THREE.GLTFLoader();
 const scene1 = new THREE.Scene();
 const renderer1 = new THREE.WebGLRenderer({ antialias: true });
 
-const lightA1 = new THREE.AmbientLight(0xced0de); // soft white light
-scene1.add(lightA1);
-
-const lightP1 = new THREE.PointLight(0xdae5e8, 0.5);
-lightP1.position.set(-10, 30, 700);
-scene1.add(lightP1);
-
 renderer1.setSize(window.innerWidth, window.innerHeight);
-renderer1.setClearColor(0xdfe4e8, 1.07);
+renderer1.setClearColor(0xDAE5E8, 1);
 document.getElementById("castle").appendChild(renderer1.domElement);
 
 loader1.load(
   "https://holesa.github.io/staging/poly/models/castle/castle.gltf",
   function (glb) {
-    glb.scene.scale.set(0.38, 0.38, 0.38);
-    glb.scene.rotateX(100.7);
-    glb.scene.rotateY(0.2);
+    glb.scene.scale.set(0.35, 0.35, 0.35);
+    glb.scene.rotateX(100.8);
+    glb.scene.rotateY(0.25);
     scene1.add(glb.scene);
   },
   function (xhr) {
@@ -39,6 +32,13 @@ loader1.load(
     console.log("An error happened");
   }
 );
+
+const lightA1 = new THREE.AmbientLight(0xE3E6E9); // soft white light
+scene1.add(lightA1);
+
+const lightP1 = new THREE.PointLight(0xffffff, 0.70);
+lightP1.position.set(80, 40, 80);
+scene1.add(lightP1);
 
 
 window.onscroll = (e) => {
